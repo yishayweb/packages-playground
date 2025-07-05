@@ -1,0 +1,36 @@
+{
+  "name": "@yishayweb/icons",
+  "version": "0.0.0",
+  "license": "MIT",
+  "types": "lib/types/src/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "exports": {
+    "import": "./lib/esm/src/index.js",
+    "require": "./lib/cjs/src/index.js",
+    "types": "./lib/types/src/index.d.ts",
+    "default": "./lib/esm/src/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsc --project tsconfig.esm.json & tsc --project tsconfig.cjs.json --watch",
+    "build": "tsc --skipLibCheck --project tsconfig.esm.json & tsc --skipLibCheck --project tsconfig.cjs.json",
+    "delete-deps": "rimraf ./node_modules"
+  },
+  "description": "A components ui library",
+  "devDependencies": {
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17 || ^18",
+    "react-dom": "^16.8.0 || ^17 || ^18"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.18.6"
+  },
+  "gitHead": "e510db2f36520a8636a401a189cc7db05f71d6c8"
+}
